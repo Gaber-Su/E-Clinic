@@ -1,1 +1,12 @@
-<p>index works!</p>
+<!-- <h1 class="text-danger">Hello, e-clinic</h1> -->
+
+<!-- -------------------- -->
+<!-- ----- Side nav ----- -->
+<!-- -------------------- -->
+<app-sidenav [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()" (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)" />
+
+<!------- Pages here ----- -->
+<app-main [isCollapsed]="isLeftSidebarCollapsed()" [sizeScreen]="screenSize()"/>
+
+
+<!--i will route here '' -->
