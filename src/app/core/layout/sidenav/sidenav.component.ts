@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ViewEncapsulation, Inject, ViewChild, signal, input, output, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MENU } from '../menu';
+import { SharedModule } from '../../../shared/shared.module';
 
 type Item = {
   label : string,
@@ -12,7 +13,7 @@ type Item = {
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, SharedModule],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss',
 })

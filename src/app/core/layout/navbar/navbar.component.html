@@ -1,9 +1,34 @@
-<section class="header-navbar d-flex justify-content-between align-items-center p-1">
-    <input class="form-control me-2 w-50 border-0 shadow-none" type="search" placeholder="Search" aria-label="Search">
-    <div class="avatar">
-        <img width="30px" class="me-2"  src="../../../../assets/images/dark-mode.png" alt="" srcset="">
-        <img width="30px"  src="../../../../assets/images/bell-alarm.png" alt="" srcset="">
+<div class="d-flex justify-content-end mb-3">
+  <!-- <button class="btn btn-danger me-3" (click)="translate('en')">En</button>
+  <button class="btn btn-danger ms-3" (click)="translate('ar')">Ar</button> -->
+  <p-dropdown 
+  (onChange)="translate()"
+    [options]="langs" 
+    [(ngModel)]="selectedLang" 
+    optionLabel="name" 
+    placeholder="Select a lang" />
+
+</div>
+
+<!-- toggle -->
+
+<section class="header-navbar d-flex justify-content-between align-items-center mb-4">
+    <input 
+  class="form-control me-2 w-50 border-0 shadow-none" type="search" [placeholder]="'Search' | translate" aria-label="Search">
+  
+    <div class="avatar d-flex">
+        <!-- <img width="30px" class="me-2"  src="../../../../assets/images/dark-mode.png" alt="" srcset=""> -->
+        <input  (change)="switch()"
+        [(ngModel)]="checked"  type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+        <!-- <img width="30px"  src="../../../../assets/images/bell-alarm.png" alt="" srcset=""> -->
+        
         <img width="30px" class="ms-3" src="../../../../assets/images/profile.png" alt="" srcset="">
     </div>
 </section>
+
 

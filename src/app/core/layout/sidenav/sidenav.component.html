@@ -29,10 +29,11 @@
         >
           <!-- <i class="sidenav-link-icon" [class]="item.icon"></i> -->
            <div>
-            <img src="../../../../assets/images/bank-svgrepo-com.svg" width="25px" alt="" srcset="">
+            <!-- <img src="../../../../assets/images/bank-svgrepo-com.svg" width="25px" alt="" srcset=""> -->
+            <i class="fa-solid fa-house"></i>
            </div>
           @if (!isLeftSidebarCollapsed()) {
-            <span class="sidenav-link-text">{{ item.label }}</span>
+            <span class="sidenav-link-text">{{ item.label | translate}}</span>
           }
         </a>
       </li>
@@ -42,10 +43,11 @@
 
             <!-- this is when has items -->
             <a class="sidenav-nav-link" *ngIf="hasItems(item)" href="javascript:void(0);">
-              <img src="../../../../assets/images/bank-svgrepo-com.svg" width="25px" alt="" srcset="">
+              <!-- <img src="../../../../assets/images/bank-svgrepo-com.svg" width="25px" alt="" srcset=""> -->
+              <i class="fa-solid fa-house"></i>
               <!-- <i class="link-icon" [attr.data-feather]="item.icon" appFeatherIcon *ngIf="item.icon"></i> -->
               @if (!isLeftSidebarCollapsed()) {
-            <span class="sidenav-link-text">{{ item.label }}</span>
+            <span class="sidenav-link-text">{{ item.label | translate }}</span>
           }
               <!-- <span class="sidenav-link-text"> {{ item.label }}</span> -->
                 @if (!isLeftSidebarCollapsed()) {
@@ -71,7 +73,7 @@
                   <a class="nav-link nav-link-ref" [routerLink]="subItem.link" [routerLinkActive]="['mm-active']" [routerLinkActiveOptions]="{ exact:false }" *ngIf="!hasItems(subItem)"
                     [attr.data-parent]="subItem.parentId">
                     <i class="link-icon" [attr.data-feather]="subItem.icon" appFeatherIcon *ngIf="subItem.icon"></i>
-                    {{ subItem.label }}
+                    {{ subItem.label | translate }}
                   </a>
 
                   <!-- <ul class="sidebar-nav sub-menu nav-third-level" *ngIf="hasItems(subItem)" aria-expanded="false">

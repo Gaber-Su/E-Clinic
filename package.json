@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "@syncfusion/ej2-angular-base": "^26.2.5",
     "@syncfusion/ej2-angular-dropdowns": "^26.2.9",
     "@syncfusion/ej2-angular-lists": "^26.2.5",
@@ -32,6 +34,8 @@
     "@syncfusion/ej2-popups": "^26.2.8",
     "@syncfusion/ej2-splitbuttons": "^26.2.5",
     "bootstrap": "^5.3.3",
+    "ngx-translate-messageformat-compiler": "^7.0.0",
+    "primeng": "^17.18.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

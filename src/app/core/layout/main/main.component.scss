@@ -19,3 +19,14 @@
   width: calc(100% - 5rem);
   margin-left: 5rem;
 }
+
+/* ---- When direction rtl apply those ------*/
+.body-trimmed:dir(rtl), .body-md-screen:dir(rtl) {
+  width: calc(100% - 16.5625rem) !important;
+  margin-right: 16.5625rem !important;
+}
+
+.body:dir(rtl){
+  width: calc(100% - 5rem);
+  margin-right: 5rem;
+}

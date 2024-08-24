@@ -1,0 +1,19 @@
+{
+    "Dashboard": "لوحة العدادات",
+    "General Setups" : "الإعدادات العامة",
+   "Patients" : "المرضى",
+    "Staff" : "الطاقم",
+    "Branches" : "الفروع",
+    "Services" : "الخدمات",
+    "Vistors" : "الزوار",
+    "Search" : "بحث",
+    "Products" : "المنتجات",
+    "table" : {
+        "Name" : "الاسم",
+        "Image" : "الصورة",
+        "Price" : "السعر",
+        "Category" : "الفئة",
+        "Reviews" : "التقييمات",
+        "Status" : "الحالة"
+    }
+}

@@ -1,3 +1,60 @@
 .header-navbar {
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 10px;
+   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
+::ng-deep {
+   .p-ripple .p-element .p-togglebutton .p-button .p-component .p-highlight {
+      height: 32px !important;
+   }
+}
+
+
+// checkbox 
+.checkbox {
+   opacity: 0;
+   position: absolute;
+ }
+ 
+ .checkbox-label {
+   background-color: #111;
+   width: 50px;
+   height: 26px;
+   border-radius: 50px;
+   position: relative;
+   padding: 5px;
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .fa-moon {color: #f1c40f;}
+ 
+ .fa-sun {color: #f39c12;}
+ 
+ .checkbox-label .ball {
+   background-color: #fff;
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   left: 2px;
+   top: 2px;
+   border-radius: 50%;
+   transition: transform 0.2s linear;
+ }
+ 
+ .checkbox:checked + .checkbox-label .ball {
+   transform: translateX(24px);
+ }
+ 
+ 
+ ::ng-deep {
+
+   ul.p-dropdown-items {
+     padding-left: 0px !important;
+    }
+  }
+ 
+ 

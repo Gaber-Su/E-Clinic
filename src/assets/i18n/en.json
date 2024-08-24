@@ -1,0 +1,19 @@
+{
+    "Dashboard" : "Dashboard",
+    "General Setups" : "General Settings",
+    "Patients" : "Patients",
+    "Staff" : "Staff",
+    "Branches" : "Branches",
+    "Services" : "Services",
+    "Vistors" : "Vistors",
+    "Search" : "Search",
+    "Products" : "Products",
+    "table" : {
+        "Name" : "Name",
+        "Image" : "Image",
+        "Price" : "Price",
+        "Category" :"Category",
+        "Reviews" : "Reviews",
+        "Status" : "Status"
+    }
+}

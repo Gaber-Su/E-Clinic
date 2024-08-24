@@ -27,6 +27,22 @@
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              {
+                "input": "src/assets/themes/lara-light-blue.css",
+                "bundleName": "lara-light-blue",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/bootstrap4-dark-blue.css",
+                "bundleName": "bootstrap4-dark-blue",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/arya-blue.css",
+                "bundleName": "arya-blue",
+                "inject": false
+              },
+              
               "src/styles.scss"
             ],
             "scripts": [

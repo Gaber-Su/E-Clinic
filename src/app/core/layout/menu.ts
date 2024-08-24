@@ -26,12 +26,12 @@ export const MENU = [
     ],
     subItems: [
       {
-        label: 'Doctors',
-        link: '/report/standard-reports',
+        label: 'Patients',
+        link: '/patients',
       },
       {
         label: 'Staff',
-        link: '/report/ad-hoc-report',
+        link: '/staff',
       },
       {
         label: 'Branches',
@@ -45,7 +45,7 @@ export const MENU = [
     isExpanded : true
   },
   {
-    label: 'Visitors',
+    label: 'Vistors',
     // isTitle: true,
     permission: [
       'BusinessOfficer',

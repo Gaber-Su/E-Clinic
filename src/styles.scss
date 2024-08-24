@@ -1,9 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 
-// @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-// @import '../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
+@import "primeng/resources/primeng.css";
+
+// apply direction 
+html:dir(rtl), body:dir(rtl) {
+//     direction:ltr;
+    text-align: right;
+    th, td {
+        text-align: center;
+    }
+  }
+
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    .sidenav{
+        background-color: #1e1e1e;
+        color: rgba(255, 255, 255, 0.87);
+        .sidenav-link-text , .fa-solid, .nav-item{
+            color: rgba(255, 255, 255, 0.87);
+        }
+    
+    }
+    .header-navbar {
+        background-color: #1e1e1e !important;
+        input[type='search'] {
+        background-color: #1e1e1e !important;
+        color: rgba(255, 255, 255, 0.87);
+        &::placeholder {
+        color: rgba(255, 255, 255, 0.87);
+
+        }
+
+        }
+    }
+    a.nav-link   {
+        transition: none !important;
+    }
+    .body, .body-trimmed  {
+        background-color: #1e1e1e!important;
+    }
+    
+} 
+
