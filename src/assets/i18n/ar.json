@@ -15,5 +15,11 @@
         "Category" : "الفئة",
         "Reviews" : "التقييمات",
         "Status" : "الحالة"
-    }
+    },
+    "COLUMN_FILTER": {
+        "MENU": "القايمة",
+        "NAME": "الاسم ",
+        "MatchALl": "مطابق ل "
+    
+      }
 }

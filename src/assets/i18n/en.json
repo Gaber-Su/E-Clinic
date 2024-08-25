@@ -15,5 +15,11 @@
         "Category" :"Category",
         "Reviews" : "Reviews",
         "Status" : "Status"
-    }
+    },
+    "COLUMN_FILTER": {
+    "MENU": "MENU",
+    "NAME": "Name",
+    "MatchALl": "MatchALl"
+
+  }
 }
