@@ -1,21 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';import { RatingModule } from 'primeng/rating';
 import { TagModule } from 'primeng/tag';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../../shared/shared.module';
+import { PaginatorModule } from 'primeng/paginator';
+import { LanguageService } from '../../../core/services/language.service';
+import { PrimeNGConfig } from 'primeng/api';
 
 
 
 @Component({
   selector: 'app-staff-list',
   standalone: true,
-  imports: [TableModule, ButtonModule, RatingModule, TagModule, CurrencyPipe, CommonModule, FormsModule, SharedModule],
+  imports: [TableModule, ButtonModule, RatingModule, TagModule, CurrencyPipe, CommonModule, FormsModule, SharedModule, PaginatorModule],
   templateUrl: './staff-list.component.html',
   styleUrl: './staff-list.component.scss'
 })
-export class StaffListComponent {
+export class StaffListComponent implements OnInit  {
+    showPaginatorInAr:boolean = false;
+    
+    constructor(public _langService:LanguageService, private _primeConfig:PrimeNGConfig) {}
+    selectedRows:any[] = []
   products = [
     {
       id: '1000',
@@ -392,6 +399,22 @@ getSeverity(status: string) {
   }
   
 }
+onRowSelect(event:any) {
+    console.log("🚀 ~ StaffListComponent ~ onRowSelect ~ event:", event)
+    console.log(this.selectedRows);
+    
+    
 }
+
+isSelectedOrNot(product:any) {
+    return (this.selectedRows).includes(product)
+}
+
+ngOnInit(): void {
+// this.showPaginatorInAr = this._langService.usedLang() === 'ar' ? true : false;
+}
+
+}
+
 
 

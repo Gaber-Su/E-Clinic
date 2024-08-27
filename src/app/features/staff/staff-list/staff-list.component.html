@@ -1,6 +1,5 @@
 <div class="card">
-    <p-table [responsive]="true" [value]="products" [tableStyle]="{'min-width': '60rem'}" [paginator]="true" [rows]="5"
-    [rowsPerPageOptions]="[5, 10, 20]" >
+    <p-table  [(selection)]="selectedRows" (onRowSelect)="onRowSelect($event)"  [paginatorLocale]="_langService.usedLang() == 'ar' ? 'ar-EG' : 'en'"  [totalRecords]="120" [paginator]="true" [rows]="5"  [rowsPerPageOptions]="[5,10,20]" [responsive]="true" [value]="products" [tableStyle]="{'min-width': '60rem'}"  >
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
                 {{'Products' | translate}}
@@ -27,7 +26,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-product>
            
-            <tr>
+            <tr [ngClass]="{'highlight-product' : isSelectedOrNot(product)}">
                 <td>
                     <p-tableCheckbox [value]="product" />
                 </td>
@@ -45,4 +44,12 @@
             </div>
         </ng-template>
     </p-table>
-</div>
+
+    <p-paginator 
+    [locale]="showPaginatorInAr ? 'ar-EG' :'en'"
+    [first]="0"
+    [rows]="5" 
+    [totalRecords]="120" 
+    [rowsPerPageOptions]="[5, 10, 20]" />
+    </div>
+

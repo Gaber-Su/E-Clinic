@@ -21,5 +21,14 @@
         "NAME": "الاسم ",
         "MatchALl": "مطابق ل "
     
-      }
+      },
+      "primeng": {
+        "startsWith": "يبدأ بـ",
+        "Apply" : "تم"
+      },
+      "Name" : "الاسم",
+      "Code" : "الكود",
+      "Price" : "السعر",
+      "Actions" : "التعديلات"
+       
 }

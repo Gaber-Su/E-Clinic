@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ThemeService } from '../../services/theme.service';
@@ -10,6 +10,10 @@ import { flatMap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { DropdownModule } from 'primeng/dropdown';
 import { SharedModule } from '../../../shared/shared.module';
+import { LanguageService } from '../../services/language.service';
+import { PrimeNGConfig } from 'primeng/api';
+import { translationsPrimeNgTable } from '../../../../assets/i18n/translation.prime-ng-table';
+// import {  translationsPrimeNgTable } from '../../../shared/models/translation.primeng-table';
 
 
 
@@ -40,7 +44,7 @@ export class NavbarComponent {
 
  
   ]
-  constructor (private _themeService:ThemeService, public _translateService : TranslateService) {
+  constructor (private _themeService:ThemeService, public _translateService : TranslateService, private _langService: LanguageService, private _primeConfig : PrimeNGConfig) {
     console.log(this.selectedLang.name);
     
   }
@@ -59,14 +63,21 @@ export class NavbarComponent {
     this._themeService.switchBetweenThemes('lara-light-blue')
     
   }
-
-  testSwitch(event:any) {
-    console.log(event.target.value);
-    
-  }
   translate() {
+
     this._translateService.use(this.selectedLang.name);
-    localStorage.setItem('current-lang', this.selectedLang.name)
+    this._langService.usedLang.set(this.selectedLang.name)
+    console.log(this._langService.usedLang());
+    this._langService.showPaginatorInAr = this._langService.usedLang() === 'ar' ? true : false
+    /** ---- change prime ng config for table ---- */
+    const lang = this._langService.usedLang();
+    this._primeConfig.setTranslation(translationsPrimeNgTable[lang])
+    /** ---- change prime ng config for table ---- */
+
+   
+
+
+    /** --- change direction body */
     if(this.selectedLang.name == 'ar') {
       document.dir = 'rtl'
     } else {
@@ -77,3 +88,6 @@ export class NavbarComponent {
   
 
 }
+
+
+

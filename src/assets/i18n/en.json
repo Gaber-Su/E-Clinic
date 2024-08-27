@@ -21,5 +21,10 @@
     "NAME": "Name",
     "MatchALl": "MatchALl"
 
-  }
+  },
+  "Name" : "Name",
+  "Code" : "Code",
+  "Price" : "Price",
+  "Actions" : "Actions"
+
 }
