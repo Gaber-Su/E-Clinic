@@ -12,6 +12,7 @@ export const MENU = [
       'BusinessExecutive',
     ],
     isTitle: true,
+    link : 'Dashboard'
 
    
   },

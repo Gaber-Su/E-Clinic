@@ -7,4 +7,8 @@
 .active {
     color: $blue !important;
     background-color: unset !important;
+    .sidenav-link-text {
+        color: inherit !important;
+        background-color: inherit !important;
+    }
 }
