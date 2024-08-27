@@ -1,5 +1,5 @@
 <div class="card">
-    <p-table  [(selection)]="selectedRows" (onRowSelect)="onRowSelect($event)"  [paginatorLocale]="_langService.usedLang() == 'ar' ? 'ar-EG' : 'en'"  [totalRecords]="120" [paginator]="true" [rows]="5"  [rowsPerPageOptions]="[5,10,20]" [responsive]="true" [value]="products" [tableStyle]="{'min-width': '60rem'}"  >
+    <p-table (onFilter)="filter($event)" [(selection)]="selectedRows" (onRowSelect)="onRowSelect($event)"  [paginatorLocale]="_langService.usedLang() == 'ar' ? 'ar-EG' : 'en'"  [totalRecords]="120" [paginator]="true" [rows]="5"  [rowsPerPageOptions]="[5,10,20]" [responsive]="true" [value]="products" [tableStyle]="{'min-width': '60rem'}"  >
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
                 {{'Products' | translate}}
@@ -15,7 +15,7 @@
                         {{'table.Name' | translate}}
                         <p-sortIcon field="name" />
                     </div>
-                    <p-columnFilter type="text" field="name" display="menu" class="ml-auto" />
+                    <p-columnFilter   type="text" field="name" display="menu" class="ml-auto" />
                 </th>
                 <th>{{'table.Image' | translate}}</th>
                 <th>{{'table.Price' | translate}}</th>

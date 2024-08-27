@@ -414,6 +414,11 @@ ngOnInit(): void {
 // this.showPaginatorInAr = this._langService.usedLang() === 'ar' ? true : false;
 }
 
+filter(event:any){
+    console.log("🚀 ~ StaffListComponent ~ filter ~ event:", event)
+    
+}
+
 }
 
 
