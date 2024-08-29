@@ -4,6 +4,10 @@ import { patientsResolver } from './features/patients/resolver/patients.resolver
 
 export const routes: Routes = [
   {
+    path : '' , 
+    loadComponent : () => import('./core/auth/login/login.component').then((l)=>l.LoginComponent )
+  },
+  {
     path: 'Dashboard',
    loadComponent : () => import('./features/dashboard/dashboard.component').then(d => d.DashboardComponent)
   },

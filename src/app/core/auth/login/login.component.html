@@ -1,0 +1,57 @@
+<div class="">
+    <form class="form bg-white rounded p-3 mx-2 position-absolute top-50 left-50 translate-middle"
+     id="loginForm">
+      <div class="container">
+        <!-- <div class="col-md-12">
+        <div class="image w-100 text-center">
+          <img src="../../../../assets/images/logog.png" alt="etmana logo" />
+        </div>
+      </div> -->
+        <!-- <hr class="my-3" /> -->
+        <div class="title mt-5">
+          <h4 class="">Welcome Back !</h4>
+          <!-- <h2>
+          <i class="fa-solid fa-arrow-right-to-bracket icon"></i> Login to
+          Your Account
+        </h2> -->
+          <h2>
+            <!-- Sign in to continue to Etmana. -->
+          </h2>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email..." formControlName="email" />
+          <small class="text-danger" *ngIf="submitted && loginForm.get('email')?.hasError('required')">
+            Email Address is Required
+          </small>
+          <small class="text-danger" *ngIf="submitted && loginForm.get('email')?.hasError('email')">
+            Email Address is Invalid
+          </small>
+        </div>
+        <div class="form-group mt-3 mb-4">
+          <input type="password" class="form-control" placeholder="Passowrd..." formControlName="password" />
+          <small class="text-danger" *ngIf="
+            submitted && loginForm.get('password')?.hasError('required')
+          ">
+            Password is Required
+          </small>
+        </div>
+        <div class="forget_pasword mb-4">
+
+          <a href="http://" target="_blank" rel="noopener noreferrer">Forget Password?</a>
+        </div>
+        <div>
+          <button  type="button" class="submit-btn" >
+            <span *ngIf="!loadingIndicator"> Sign in </span>
+            <span *ngIf="loadingIndicator"> Waiting... </span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <footer class="text-center position-absolute translate-middle">
+      <p class="mb-0 text-muted ">&copy; 2023 Etmana. Crafted with <img src="../../../../assets/images/icons8-heart-16.png"
+          alt=""> by
+        Etmana</p>
+    </footer>
+
+  </div>
