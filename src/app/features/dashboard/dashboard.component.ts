@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../core/http/api.service';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,16 +11,20 @@ import { ApiService } from '../../core/http/api.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private _apiService : ApiService) {}
+  constructor(private _apiService : ApiService, private _langServcie : LanguageService) {}
   
 ngOnInit(): void {
-  this.GetPosts()
+  // this.GetPosts()
 }  
-  GetPosts() {
-    this._apiService.GetPosts().subscribe(res => {
-      console.log(res);
+  // GetPosts() {
+  //   this._apiService.GetPosts().subscribe(res => {
+  //     console.log(res);
       
-    })
+  //   })
+  // }
+
+  login() {
+this._langServcie.login()
   }
 
 }

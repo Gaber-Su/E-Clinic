@@ -10,6 +10,6 @@ export class ApiService {
   constructor(private _httpClient : HttpClient) { }
 
   GetPosts() {
-  return this._httpClient.get(`${env.apiRoot}/posts`)
+  // return this._httpClient.get(`${env.apiRoot}/posts`)
   }
 }

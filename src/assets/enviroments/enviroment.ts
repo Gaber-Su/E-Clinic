@@ -1,3 +1,3 @@
 export const env = {
-    apiRoot : `https://jsonplaceholder.typicode.com`
+    baseURL : `http://localhost:8080`
 }
