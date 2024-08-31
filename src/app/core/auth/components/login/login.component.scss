@@ -1,0 +1,116 @@
+@media screen and (max-width: 750px) {
+    .form {
+      width: 100% !important;
+    }
+  }
+  
+  // update
+  
+  section {
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    // p {
+    //   color: #ffffff80 !important;
+    // }
+  }
+  
+  .form {
+    z-index: 999999;
+    width: 30%;
+    // height: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    .image img {
+      width: 40%;
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        color: #878a99;
+        font-size: 14px;
+        font-weight: 200;
+      }
+      .icon {
+        color: var(--iconColor) !important;
+      }
+      h4 {
+        // color: var(--darkGray);
+        // color: #4b38b3;
+        font-size: 20px;
+      }
+    }
+    .forget_pasword {
+      text-align: right;
+      a {
+        text-decoration: none;
+        color: var(--textColor);
+      }
+    }
+  }
+  
+  .bg-image {
+    height: 60vh;
+    position: relative;
+    svg {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
+  
+    background-image: url("../../../../../assets/images/e-clinic-pixels.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .overlay {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  
+      // background: linear-gradient(to right, #41319c, #4b38b3);
+      opacity: 0.9;
+    }
+  }
+
+  .auth-one-bg .bg-overlay {
+    background: linear-gradient(to right, #41319c, #4b38b3);
+  }
+  
+  
+  .submit-btn {
+    // background-color: #45cb85;
+    border: solid 1px #0099FF;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+  
+  .submit-btn:hover {
+    color: #fff;
+    background-color: #3bad71;
+  }
+  
+  footer {
+    bottom: 10%;
+    left: 50%;
+    z-index: 6666666;
+  }
+  
+  footer > p {
+    // z-index: 77777;
+    color: #6c757d !important;
+  }
+  
