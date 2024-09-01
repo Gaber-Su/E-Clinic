@@ -29,7 +29,7 @@ export class AuthService {
     const body = new URLSearchParams({
       grant_type: 'password',
       client_id: 'front-client',
-      client_secret: 'aXccsyUo4MjVFLDT8Q3NSegyRz9m0QIW',
+      client_secret: '6jMjkZP1DkGcX5fCeDsnmpAJ1tahe1pu',
       username: username,
       password: password
     }).toString();

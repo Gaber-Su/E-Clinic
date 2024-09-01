@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, signal, } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ThemeService } from '../../services/theme.service';
@@ -13,6 +13,7 @@ import { SharedModule } from '../../../shared/shared.module';
 import { LanguageService } from '../../services/language.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { translationsPrimeNgTable } from '../../../../assets/i18n/translation.prime-ng-table';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 // import {  translationsPrimeNgTable } from '../../../shared/models/translation.primeng-table';
 
 
@@ -22,11 +23,12 @@ import { translationsPrimeNgTable } from '../../../../assets/i18n/translation.pr
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ButtonModule, InputTextModule, TableModule, ToggleButtonModule, FormsModule , ReactiveFormsModule, CommonModule, DropdownModule, SharedModule],
+  imports: [ButtonModule, InputTextModule, TableModule, ToggleButtonModule, FormsModule , ReactiveFormsModule, CommonModule, DropdownModule, SharedModule, KeycloakAngularModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+
   langs = [
     {name : 'en',
 
@@ -44,7 +46,7 @@ export class NavbarComponent {
 
  
   ]
-  constructor (private _themeService:ThemeService, public _translateService : TranslateService, private _langService: LanguageService, private _primeConfig : PrimeNGConfig) {
+  constructor (private _keyCloackService : KeycloakService, private _themeService:ThemeService, public _translateService : TranslateService, private _langService: LanguageService, private _primeConfig : PrimeNGConfig) {
     console.log(this.selectedLang.name);
     
   }
@@ -86,6 +88,8 @@ export class NavbarComponent {
 
   }
   
+  // logOut() {
+  // }
 
 }
 

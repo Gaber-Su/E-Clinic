@@ -6,6 +6,7 @@ import { registerLicense } from '@syncfusion/ej2-base';
 //   'Ngo9BigBOggjHTQxAR8/V1NCaF1cWWhBYVFwWmFZfVpgfV9GZVZVQWYuP1ZhSXxXdk1iUH9XcHFRQ2VaUk0='
 // );
 
+// debugger;
 bootstrapApplication(AppComponent, appConfig).catch((err) =>
   console.error(err)
 );

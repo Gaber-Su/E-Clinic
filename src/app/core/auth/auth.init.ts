@@ -3,27 +3,26 @@ import { env } from '../../../assets/enviroments/enviroment';
 import Keycloak from 'keycloak-js';
 
 
-export function initializeKeycloak(keycloak: KeycloakService)  {
-    debugger;
+export function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: env.baseURL,
+        url: `${env.baseURL}`,
         realm: 'Test',
-        clientId: 'front-client'
-        
+        clientId: 'front-end-angular',
       },
+      enableBearerInterceptor: true,
+      bearerPrefix: 'Bearer',
+      bearerExcludedUrls: ['/assets'],
       initOptions: {
-        onLoad: 'login-required',
-        // token : 
-        // adapter : 'cordova',
-        // checkLoginIframe: true,
-        // flow:'standard',
+        // redirectUri : 'http://localhost:4200',
+      
+        onLoad: 'check-sso',
+        silentCheckSsoRedirectUri:
+          window.location.origin + '.',
       },
-    
     });
 }
-
 
 
 // export function loginWithPassword(username: string, password: string) {
