@@ -51,7 +51,7 @@ export class ForgetPasswordComponent {
 
     // let token = localStorage.getItem('access_token');
     // let headers = new HttpHeaders({
-    //   'Authorization': `Bearer ${token}`, // Corrected the typo and format
+    //   'Authorization': `Bearer ` + token, // Corrected the typo and format
     //   'Content-Type': 'application/json'
     // });
     // this.http.put(url, body, {headers}).subscribe(res => {
@@ -62,14 +62,7 @@ export class ForgetPasswordComponent {
       
     // })
 
-    let url = env.baseURL + '/Test/users'
-    this.http.get(url, {headers : {
-      'authorization': 'Bearer ' +localStorage.getItem('access_token')
-    }}).subscribe(res => {
-    console.log("🚀 ~ ForgetPasswordComponent ~ forgotPassword ~ res:", res)
-
-    }
-  )
+ 
   }
 }
 
