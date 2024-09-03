@@ -3,7 +3,7 @@ import { env } from '../../../assets/enviroments/enviroment';
 import Keycloak from 'keycloak-js';
 
 
-export function initializeKeycloak(keycloak: KeycloakService) {
+export  function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
@@ -15,13 +15,15 @@ export function initializeKeycloak(keycloak: KeycloakService) {
       bearerPrefix: 'Bearer',
       bearerExcludedUrls: ['/assets'],
       initOptions: {
-        // redirectUri : 'http://localhost:4200',
-      
+        redirectUri: 'http://localhost:4200/Dashboard',
+
+
         onLoad: 'check-sso',
         silentCheckSsoRedirectUri:
-          window.location.origin + '.',
+        window.location.origin + '/assets/silent-check-sso.html',
       },
     });
+    
 }
 
 

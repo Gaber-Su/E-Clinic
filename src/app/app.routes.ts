@@ -6,32 +6,11 @@ import { TestComponent } from './shared/components/test/test.component';
 
 export const routes: Routes = [
 
-  {
-    path : '' , 
-    loadComponent : () => import('./core/auth/components/login/login.component').then((l)=>l.LoginComponent ),  
-    // canActivate : [AuthGuard],
-    // data: { roles:  [
-    //     "view-realm",
-    //     "view-identity-providers",
-    //     "manage-identity-providers",
-    //     "impersonation",
-    //     "realm-admin",
-    //     "create-client",
-    //     "manage-users",
-    //     "query-realms",
-    //     "view-authorization",
-    //     "query-clients",
-    //     "query-users",
-    //     "manage-events",
-    //     "manage-realm",
-    //     "view-events",
-    //     "view-users",
-    //     "view-clients",
-    //     "manage-authorization",
-    //     "manage-clients",
-    //     "query-groups"
-    //   ]},
-  },
+  // {
+  //   path : '' , 
+  //   loadComponent : () => import('./core/auth/components/login/login.component').then((l)=>l.LoginComponent ),  
+
+  // },
   //   {
   //   path : '' , 
   //   loadComponent : () => import('./core/auth/components/forget-password/forget-password.component').then((l)=>l.ForgetPasswordComponent ),   
@@ -44,25 +23,49 @@ export const routes: Routes = [
   //  loadComponent : () => import('./features/dashboard/dashboard.component').then(d => d.DashboardComponent),
   //  canActivate : [AuthGuard],
   // },
-  {
-    path : 'index',
-    loadComponent: ()=> import ('./core/layout/index.component').then(i => i.IndexComponent),
-    children : [
-      {
-        path: 'Dashboard',
-       loadComponent : () => import('./features/dashboard/dashboard.component').then(d => d.DashboardComponent),
-  
-      },
-      {
-        path : 'patients', 
-        loadComponent: () => import("./features/patients/components/patients-list/patients-list.component").then(x => x.PatientsListComponent)
-        , resolve : {patientsConfig : patientsResolver}
-      },
-      {
-        path : 'staff', 
-        loadComponent: () => import("./features/staff/staff-list/staff-list.component").then(x => x.StaffListComponent)
-      }
-    ]
-  },
 
+  // {
+  //   path : '',
+  //   loadComponent: ()=> import ('./core/layout/index.component').then(i => i.IndexComponent),
+  //   canActivate : [AuthGuard],
+    
+
+  //   children : [
+  //     {
+  //       path: 'Dashboard',
+  //      loadComponent : () => import('./features/dashboard/dashboard.component').then(d => d.DashboardComponent),
+  //     canActivate : [AuthGuard],
+
+  
+  //     },
+  //     {
+  //       path : 'patients', 
+  //       loadComponent: () => import("./features/patients/components/patients-list/patients-list.component").then(x => x.PatientsListComponent)
+  //       , resolve : {patientsConfig : patientsResolver}
+  //     },
+  //     {
+  //       path : 'staff', 
+  //       loadComponent: () => import("./features/staff/staff-list/staff-list.component").then(x => x.StaffListComponent)
+  //     }
+  //   ]
+  // },
+  {
+    path: 'Dashboard',
+   loadComponent : () => import('./features/dashboard/dashboard.component').then(d => d.DashboardComponent),
+  canActivate : [AuthGuard],
+
+
+  },
+  {path: '', redirectTo : 'Dashboard', pathMatch : 'full'},
+      {
+          path : 'patients', 
+          loadComponent: () => import("./features/patients/components/patients-list/patients-list.component").then(x => x.PatientsListComponent)
+          , resolve : {patientsConfig : patientsResolver}
+        },
+        {
+          path : 'staff', 
+          loadComponent: () => import("./features/staff/staff-list/staff-list.component").then(x => x.StaffListComponent)
+        }
+    
+ 
 ];

@@ -12,7 +12,7 @@ export const MENU = [
       'BusinessExecutive',
     ],
     isTitle: true,
-    link : '/index/Dashboard'
+    link : '/Dashboard'
 
    
   },
@@ -28,11 +28,11 @@ export const MENU = [
     subItems: [
       {
         label: 'Patients',
-        link: '/index/patients',
+        link: '/patients',
       },
       {
         label: 'Staff',
-        link: '/index/staff',
+        link: '/staff',
       },
       {
         label: 'Branches',
